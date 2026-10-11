@@ -43,7 +43,7 @@ if uploaded_file is not None:
                 outputs = model(input_tensor)
                 _, predicted = torch.max(outputs, 1)
 
-            classes = ['Pneumonia', 'normal']
+            classes = ['Normal', 'Pneumonia']
             result = classes[predicted.item()]
 
             if result == "Pneumonia":
